@@ -43,6 +43,18 @@ com sessão logada no Lattes, e `npm i @paladini/lattes-toolkit` (Node 18+).
 - "Sucesso" na tela não garante que o item entrou: confira sempre na LISTA do
   item (ex.: `pkg_evento.lista`) — o Exportar entrega a versão publicada, não a
   atual.
+- Item vermelho ("já cadastrada") no passo 3 é **bloqueado** com erro vazio, e
+  o match é por título (falso positivo com resumos em outras produções).
+- Importação é **flaky**: o mesmo item pode falhar e entrar na tentativa
+  seguinte. Confira a lista e reenvie.
+- Instituições comuns (Alura, DIO, Mimo, Canva) **não existem no registro** do
+  CNPq — cursos delas exigem cadastro de instituição/curso/área na UI.
+- Erros da plataforma são opacos ("problemas:" com lista vazia); valide o XML
+  com lxml contra o DTD e use bissecção de lotes.
+- Automação de iframe: neutralize `alert`/`confirm` ANTES de clicar, campos
+  `disabled` precisam `e.disabled = false`, `confirm` de iframe trava o eval
+  (recupere com `firefox-cli reload`).
 
-Detalhes, comandos e armadilhas: `references/importacao.md`,
-`references/edicao-xml.md`, `references/formularios.md`.
+Lista completa com reproduções e recuperações: `references/limitacoes.md`.
+Detalhes operacionais: `references/importacao.md`, `references/edicao-xml.md`,
+`references/formularios.md`.

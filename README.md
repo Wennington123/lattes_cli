@@ -36,6 +36,7 @@ npm i @paladini/lattes-toolkit
 | `references/importacao.md` | Exportar/importar o XML: os 3 passos do Importar, filtros, armadilhas, injeção de arquivo |
 | `references/edicao-xml.md` | Edição do XML com lattes-toolkit: validação DTD 2004 + XSD 2022, sequências, onde cada coisa vai |
 | `references/formularios.md` | Formulários web: formação complementar (lookups de instituição/curso/área), eventos, vínculos |
+| `references/limitacoes.md` | Todas as limitações observadas com reprodução (importador, formulários, firefox-cli, toolkit) |
 
 ## Licença
 
